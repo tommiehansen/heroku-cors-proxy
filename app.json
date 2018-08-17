@@ -1,8 +1,8 @@
 {
-  "name": "CORS proxy",
+  "name": "AZ CORS proxy",
   "description": "An Express CORS proxy with compression, caching and whitelists.",
-  "repository": "https://github.com/Alorel/heroku-cors-proxy",
-  "website": "https://github.com/Alorel/heroku-cors-proxy",
+  "repository": "https://github.com/tommiehansen/heroku-cors-proxy/",
+  "website": "https://github.com/tommiehansen/heroku-cors-proxy/,
   "env": {
     "LOG_LEVEL": {
       "description": "The logging level to use. Permitted values, in order of priority: emerg, alert, crit, error, warning, notice, info, debug",
@@ -11,16 +11,17 @@
     },
     "ORIGIN_WHITELIST": {
       "description": "A comma-separated list of domain names allowed to use the proxy. Leave blank to allow all origins.",
-      "value": "localhost,127.0.0.1",
+      "value": "",
       "required": false
     },
     "TARGET_WHITELIST": {
       "description": "A comma-separated list of domain names the proxy is allowed to contact. Leave blank to allow all hostnames.",
-      "required": false
+      "value": "avanza.se",
+      "required": true
     },
     "CACHE_TIME": {
       "description": "Amount of time, in milliseconds, that cacheable responses will be stored in Redis. Omit or set to 0 to disable caching.",
-      "value": "300000",
+      "value": "900000",
       "required": false
     }
   },
